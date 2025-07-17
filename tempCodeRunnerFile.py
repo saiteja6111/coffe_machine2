@@ -1,0 +1,1 @@
+print(Dog1.get_age())
