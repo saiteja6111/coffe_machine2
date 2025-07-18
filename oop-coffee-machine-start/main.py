@@ -16,21 +16,30 @@ while True:
 
     if user_choice.lower() == menuitem1.name:
 
-        coffemake1.is_resource_sufficient(menuitem1) 
-        Money1.make_payment(menuitem1.cost)
-        coffemake1.make_coffee(menuitem1)
+        resource = coffemake1.is_resource_sufficient(menuitem1) 
+        if resource == True:
+            Money1.make_payment(menuitem1.cost)
+            coffemake1.make_coffee(menuitem1)
+        elif resource == False:
+            break
 
     elif user_choice.lower() == menuitem2.name:
 
-        coffemake1.is_resource_sufficient(menuitem2)
-        Money1.make_payment(menuitem2.cost)
-        coffemake1.make_coffee(menuitem2)
+        resource = coffemake1.is_resource_sufficient(menuitem2)
+        if resource == True:
+            Money1.make_payment(menuitem2.cost)
+            coffemake1.make_coffee(menuitem2)
+        elif resource == False:
+            break
 
     elif user_choice.lower() == menuitem3.name:
 
-        coffemake1.is_resource_sufficient(menuitem3)
-        Money1.make_payment(menuitem3.cost)
-        coffemake1.make_coffee(menuitem3)
+        resource = coffemake1.is_resource_sufficient(menuitem3) 
+        if resource == True:
+            Money1.make_payment(menuitem3.cost)
+            coffemake1.make_coffee(menuitem3)
+        elif resource == False:
+            break
 
     elif user_choice.lower() == 'report':
 
