@@ -13,20 +13,29 @@ Money1 = MoneyMachine()
 
 while True:
     user_choice = input(f"Enter your choice {menu1.get_items()} : ")
+
     if user_choice.lower() == menuitem1.name:
-        Money1.make_payment(2.50)
-        coffemake1.is_resource_sufficient(menuitem1)
+
+        coffemake1.is_resource_sufficient(menuitem1) 
+        Money1.make_payment(menuitem1.cost)
         coffemake1.make_coffee(menuitem1)
+
     elif user_choice.lower() == menuitem2.name:
-        Money1.make_payment(1.50)
+
         coffemake1.is_resource_sufficient(menuitem2)
+        Money1.make_payment(menuitem2.cost)
         coffemake1.make_coffee(menuitem2)
+
     elif user_choice.lower() == menuitem3.name:
-        Money1.make_payment(3.00)
+
         coffemake1.is_resource_sufficient(menuitem3)
+        Money1.make_payment(menuitem3.cost)
         coffemake1.make_coffee(menuitem3)
+
     elif user_choice.lower() == 'report':
+
         coffemake1.report()
+        Money1.report()
 
 
 
