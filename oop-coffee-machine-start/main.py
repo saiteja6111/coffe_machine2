@@ -2,8 +2,6 @@ from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
-
-
 coffemake1 = CoffeeMaker()
 menu1 = Menu()
 menuitem1 = MenuItem('latte',200,150,24,2.50)
@@ -21,7 +19,7 @@ while True:
             Money1.make_payment(menuitem1.cost)
             coffemake1.make_coffee(menuitem1)
         elif resource == False:
-            break
+            continue
 
     elif user_choice.lower() == menuitem2.name:
 
@@ -30,7 +28,7 @@ while True:
             Money1.make_payment(menuitem2.cost)
             coffemake1.make_coffee(menuitem2)
         elif resource == False:
-            break
+            continue
 
     elif user_choice.lower() == menuitem3.name:
 
@@ -39,12 +37,15 @@ while True:
             Money1.make_payment(menuitem3.cost)
             coffemake1.make_coffee(menuitem3)
         elif resource == False:
-            break
+            continue
 
     elif user_choice.lower() == 'report':
 
         coffemake1.report()
         Money1.report()
+    
+    elif user_choice.lower() == "off":
+        break
 
 
 
